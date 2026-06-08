@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Contact Form - Reach out to us with your inquiries">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Page title -->
+    <title>Contact Form - Get In Touch</title>
+    
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the contact form -->
+    <main class="container">
+        <!-- Form card wrapper with semantic HTML -->
+        <section class="form-card" aria-labelledby="form-title">
+            <!-- Form header with title and subtitle -->
+            <div class="form-header">
+                <h1 id="form-title">Get In Touch</h1>
+                <p class="form-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+
+            <!-- Contact form with proper semantic markup -->
+            <form id="contactForm" class="form" aria-label="Contact Form" novalidate>
+                
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        class="form-input" 
+                        placeholder="John Doe"
+                        aria-describedby="fullNameError"
+                        autocomplete="name"
+                        required
+                    >
+                    <!-- Error message container - hidden by default, shown on validation failure -->
+                    <div id="fullNameError" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Email Address Field -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="your.email@example.com"
+                        aria-describedby="emailError"
+                        autocomplete="email"
+                        required
+                    >
+                    <!-- Error message container for email validation -->
+                    <div id="emailError" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        class="form-textarea" 
+                        placeholder="Your message here... (at least 10 characters)"
+                        aria-describedby="messageError"
+                        rows="5"
+                        required
+                    ></textarea>
+                    <!-- Error message container for message validation -->
+                    <div id="messageError" class="error-message" role="alert" aria-live="polite"></div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-button" aria-label="Submit contact form">
+                    <span class="button-text">Send Message</span>
+                </button>
+            </form>
+
+            <!-- Success message container - hidden by default, shown after successful submission -->
+            <div id="successMessage" class="success-message" role="status" aria-live="polite" aria-atomic="true">
+                <div class="success-icon">✓</div>
+                <h2>Message Sent Successfully!</h2>
+                <p>Thank you for reaching out. We'll get back to you soon.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- External JavaScript file for form validation and interaction logic -->
+    <script src="script.js"></script>
+</body>
+</html>
